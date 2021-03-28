@@ -591,6 +591,9 @@ footer {
     justify-content: space-between;
     margin-bottom: 30px;
 }
+.row-foot>img {
+    width: 100px;
+}
 .row-foot ul {
     vertical-align: middle;
 }
