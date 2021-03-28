@@ -239,6 +239,11 @@ a.btn {
   .layanan-container {
     flex-direction: column;
   }
+  .row-foot {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -674,3 +679,42 @@ a {
 }
 
 /* END : LAYANAN KAMI */
+
+/* START FOOTER */
+
+footer {
+  padding: 55px 0;
+  background-color: #151515;
+}
+.row-foot {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-logo img {
+  width: 100px;
+}
+.footer-link ul {
+  vertical-align: middle;
+}
+.footer-link li {
+  float: left;
+  margin: 10px;
+  vertical-align: middle;
+}
+.footer-link li a {
+  border-radius: 50%;
+  color: #dfe1ea;
+  background: rgba(255, 255, 255, 0.1);
+  width: 1.9em;
+  height: 1.9em;
+  line-height: 1.9em;
+  font-size: 24px;
+  text-align: center;
+}
+.footer-link li a:hover {
+  background: #02bcf3;
+}
+
+/* END FOOTER */
