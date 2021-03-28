@@ -229,11 +229,6 @@ a.btn {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-  .book-now a {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
-  }
   .tour-desc {
     flex-direction: column;
   }
@@ -249,12 +244,13 @@ a.btn {
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
   .heading {
-    justify-content: space-between;
+    margin: 20px 0;
   }
-  .menu {
+  .navbar {
     display: none !important;
   }
-  .menu-humberger {
+
+  .menu-hamburger {
     display: block !important;
   }
 }
@@ -269,7 +265,6 @@ a.btn {
 /* START : HEADER */
 /* Header */
 header {
-  height: 92px;
   width: 100%;
   background-color: white;
   position: sticky;
@@ -278,7 +273,7 @@ header {
 }
 .heading {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .logo {
@@ -299,10 +294,15 @@ header {
   font-size: 20px;
   padding: 37px 0;
   margin: 0 15px;
+  text-transform: capitalize;
 }
 
 .navbar a:hover {
   color: #ffa900;
+}
+
+.menu-hamburger {
+  display: none;
 }
 
 .slide {
