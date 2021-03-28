@@ -242,9 +242,12 @@ a.btn {
 /* Extra large devices (large desktops) */
 /* No media query since the extra-large breakpoint has no upper bound on its width */
 
-
+.menu {
+    display: flex;
+    align-items: center;
+}
 /* Giri CSS Part */
-.tour { 
+.tour {
     justify-content: space-between;
 }
 .divider {
@@ -262,6 +265,10 @@ a.btn {
 .card {
     display: flex;
     flex-wrap: wrap;
+}
+.card-mini{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
 }
 .card-tour {
     padding: 0 15px;
@@ -312,17 +319,18 @@ figure {
     justify-content: space-between;
     align-items: center;
 }
-.card-desc h3,a {
+.card-desc h3,
+a {
     font-weight: bold;
     color: black;
     margin-top: 8px;
     margin-bottom: 45px;
     text-transform: uppercase;
     font-size: 24px;
-
 }
 .card-desc h5 {
-    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
     font-size: 16px;
     color: #000000;
@@ -338,72 +346,43 @@ figure {
     color: #ffa900;
 }
 
-.box-minimal .box-minimal-icon {
-    font-size: 30px;
-    line-height: 1;
-    color: #ffa900;
+.row{
+    display: flex;
 }
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-  }
-  
-  html {
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  .column {
-    float: left;
+.column {
+    flex: auto;
     width: 33.3%;
     margin-bottom: 16px;
     padding: 0 8px;
-  }
-  
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
-  }
-  
-  .about-section {
-    padding: 50px;
+}
+
+
+.about-section {
+    padding-bottom: 50px;
     text-align: center;
-    background-color: #9497a009;
     color: black;
     text-transform: uppercase;
     font-size: 24px;
     line-height: 1.45;
     letter-spacing: 0.06em;
-  }
-  
-  .box-minimal-border {
+}
+
+.box-minimal-border {
     padding: 20px 15px;
     border-radius: 8px;
     border: 1px solid #dfe1ea;
     transition: 450ms ease-in-out;
     margin-left: auto;
     margin-right: auto;
+    height: 250px;
 }
 
-  .container {
-    padding: 0 16px;
-  }
-  
-  .container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  .title {
+
+.title {
     color: grey;
-  }
-  
-  .button {
+}
+
+.button {
     border: none;
     outline: 0;
     display: inline-block;
@@ -413,8 +392,8 @@ body {
     text-align: center;
     cursor: pointer;
     width: 100%;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     background-color: #555;
-  }
+}
