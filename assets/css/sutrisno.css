@@ -365,7 +365,11 @@ a {
   line-height: 1;
   color: #ffa900;
 }
-
+.section-grey {
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+  fill: #f7f7f7;
+}
 .layanan-container {
   display: flex;
 
