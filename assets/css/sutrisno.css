@@ -229,6 +229,11 @@ a.btn {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+  .book-now a {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
   .tour-desc {
     flex-direction: column;
   }
@@ -243,6 +248,15 @@ a.btn {
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
+  .heading {
+    justify-content: space-between;
+  }
+  .menu {
+    display: none !important;
+  }
+  .menu-humberger {
+    display: block !important;
+  }
 }
 
 /* Large devices (desktops, less than 1200px) */
@@ -256,8 +270,8 @@ a.btn {
 .heading {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 92px;
+  justify-content: space-around;
+  height: 100px;
 }
 .menu {
   display: flex;
@@ -272,7 +286,7 @@ a.btn {
 }
 .list-menu > li > a {
   padding: 37px 0;
-  font-size: 18px;
+  font-size: 16px;
   color: #333333;
   line-height: 1;
   vertical-align: middle;
@@ -285,6 +299,13 @@ a.btn {
 }
 .list-menu > li > a:hover {
   color: #ffa900;
+}
+
+.book-now a {
+  margin: 0;
+}
+.menu-humberger {
+  display: none;
 }
 /* END : HEADER */
 
