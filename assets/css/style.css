@@ -24,7 +24,6 @@ body {
 }
 .page {
     position: relative;
-    overflow: hidden;
     min-height: 100vh !important;
     padding: 0px;
 }
@@ -242,67 +241,196 @@ a.btn {
 /* Extra large devices (large desktops) */
 /* No media query since the extra-large breakpoint has no upper bound on its width */
 
-.heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+/* Header */
+header {
     height: 92px;
+    width: 100%;
+    background-color: white;
+    position :sticky;
+    top: 0;
+    z-index: 99999;
 }
-.menu {
+.heading{
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-.list-menu {
-    text-align: center;
-}
-.list-menu li {
-    display: inline-block;
-    margin: 0 15px;
-}
-.list-menu > li > a {
-    padding: 37px 0;
-    font-size: 18px;
-    color: #333333;
-    line-height: 1;
-    vertical-align: middle;
-    font-weight: 400;
-    letter-spacing: 0.1em;
-}
-.list-menu > li.active > a {
-    color: #ffa900;
-    background: transparent;
-}
-.list-menu > li > a:hover {
-    color: #ffa900;
+.logo {
+    width: 100px;
 }
 
-.banner > img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.banner {
+.navbar a {
+    line-height: 1rem;
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    transition: all 0.5s;
+    font-weight: 100;
+    font-size: 20px;
+        padding: 37px 0;
+        margin: 0 15px;
+}
+
+.navbar a:hover {
+    color:#ffa900;
+}
+
+.slide{
     position: relative;
 }
-.overlay {
+
+.slide .text1 {
+    color: white;
     position: absolute;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 99;
+    top: 10%;
+    left: 10%;
+    width: 30%;
 }
-.web-desc {
+
+.top-wrapper p {
+    margin-top: 50px;
+}
+
+.slider{
+	overflow: hidden;
+}
+
+.slider>figure>div{
+	width: 20%;
+	float: left;
+}
+
+.slider>figure img{
+	width: 100%;
+	float: left;
+    object-fit: cover;
+    height: 600px;
+}
+
+.slider figure{
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: 100s slidy infinite;
+}
+
+.form {
     position: absolute;
-    align-items: center;
-    justify-content: center;
-    top: 25%;
-    color: #fff;
-    padding: 0 150px;
+    top: 5%;
+    right: 10%;
+    width: 40vw;
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 10px;
+    z-index: 999;
 }
+
+.unit {
+    padding: 20px;
+    color:black;
+}
+
+
+.unit .signup{
+    margin-top: 40px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 5px;
+    padding:20px;
+    font-size: 18px;
+    border: 2px solid #dee7ec;
+    border-radius: 30px;;
+}
+  
+.contact-submit {
+    background-color: #dee7ec;
+    color: #889eab;
+}
+
+@keyframes slidy{
+	0%{
+		left: 0%
+	}
+
+	10%{
+		left: 0%;
+	}
+
+	12%{
+		left: -100%;
+	}
+
+	22%{
+		left: -100%;
+	}
+
+	24%{
+		left: -200%;
+	}
+
+	34%{
+		left: -200%;
+	}
+
+	36%{
+		left: -300%;
+	}
+
+	46%{
+		left: -300%;
+	}
+
+	48%{
+		left: -400%;
+	}
+
+	58%{
+		left: -400%;
+	}
+
+	60%{
+		left: -300%;
+	}
+
+	70%{
+		left: -300%;
+	}
+
+	72%{
+		left: -200%;
+	}
+
+	82%{
+		left: -200%;
+	}
+
+	84%{
+		left: -100%;
+	}
+
+	94%{
+		left: -100%;
+	}
+
+	96%{
+		left: 0%;
+	}
+
+	100%{
+		left: 0%;
+	}
+}
+
+  
 
 /* Giri CSS Part */
 .tour {
