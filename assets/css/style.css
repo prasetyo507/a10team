@@ -6,24 +6,11 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 html,
-body,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-div {
+body {
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
         "Helvetica Neue", Arial, sans-serif;
@@ -39,11 +26,13 @@ body {
     position: relative;
     overflow: hidden;
     min-height: 100vh !important;
+    padding: 0px;
 }
 li {
     list-style: none;
 }
 
+a,
 a:hover {
     text-decoration: none;
 }
@@ -139,6 +128,11 @@ a.btn {
     vertical-align: middle;
     user-select: none;
 }
+.btn-default {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: #ffffff;
+}
 .btn-primary {
     color: #ffffff;
     background-color: #7952b3;
@@ -162,6 +156,12 @@ a.btn {
 .btn-block {
     display: block;
     width: 100%;
+}
+.btn-default:hover,
+.btn-default:active {
+    color: #ffffff;
+    background-color: #ffa900;
+    border-color: #ffa900;
 }
 .btn-primary:hover,
 .btn-primary:active {
@@ -242,10 +242,68 @@ a.btn {
 /* Extra large devices (large desktops) */
 /* No media query since the extra-large breakpoint has no upper bound on its width */
 
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 92px;
+}
 .menu {
     display: flex;
     align-items: center;
 }
+.list-menu {
+    text-align: center;
+}
+.list-menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.list-menu > li > a {
+    padding: 37px 0;
+    font-size: 18px;
+    color: #333333;
+    line-height: 1;
+    vertical-align: middle;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+.list-menu > li.active > a {
+    color: #ffa900;
+    background: transparent;
+}
+.list-menu > li > a:hover {
+    color: #ffa900;
+}
+
+.banner > img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.banner {
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.web-desc {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 25%;
+    color: #fff;
+    padding: 0 150px;
+}
+
 /* Giri CSS Part */
 .tour {
     justify-content: space-between;
@@ -266,7 +324,7 @@ a.btn {
     display: flex;
     flex-wrap: wrap;
 }
-.card-mini{
+.card-mini {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 8px;
 }
@@ -319,8 +377,7 @@ figure {
     justify-content: space-between;
     align-items: center;
 }
-.card-desc h3,
-a {
+.card-desc h3 {
     font-weight: bold;
     color: black;
     margin-top: 8px;
@@ -346,7 +403,7 @@ a {
     color: #ffa900;
 }
 
-.row{
+.row {
     display: flex;
 }
 .column {
@@ -355,7 +412,6 @@ a {
     margin-bottom: 16px;
     padding: 0 8px;
 }
-
 
 .about-section {
     padding-bottom: 50px;
@@ -377,7 +433,6 @@ a {
     height: 250px;
 }
 
-
 .title {
     color: grey;
 }
@@ -396,4 +451,36 @@ a {
 
 .button:hover {
     background-color: #555;
+}
+
+footer {
+    padding: 55px 0;
+    background-color: #151515;
+}
+.row-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.row-foot ul {
+    vertical-align: middle;
+}
+.row-foot li {
+    float: left;
+    margin: 10px;
+    vertical-align: middle;
+}
+.row-foot li a {
+    border-radius: 50%;
+    color: #dfe1ea;
+    background: rgba(255, 255, 255, 0.1);
+    width: 1.9em;
+    height: 1.9em;
+    line-height: 1.9em;
+    font-size: 24px;
+    text-align: center;
+}
+.row-foot li a:hover {
+    background: #02bcf3;
 }
